@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<link href='https://fonts.googleapis.com/css?family=Lexend' rel='stylesheet'>
+<html>
+    <title>orbicon</title>
+    <head>
+    <center>
+    <div id="countdown">45</div>
+    <p id="score">score: 0</p>
+    </center>
+    <p id="gameOver" style="opacity: 0; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">game over!</p>
+    <p id="gameOver2" style="opacity: 0; position: absolute; top: 60%; left: 50%; transform: translate(-50%, -50%);">click the back button to go back</p>
+    </head>
+    <button style="font-family: Lexend; position: absolute; top: 1%; left: 0.5%"><a href="home.html" style="text-decoration:none;color: black;" id="backButton">back</a></button>
+    <button onclick="orbOnClick()" class="button"id="orb"></button>
+    <button onclick="orbOnClick2()" class="button"id="orb2"></button>
+    <button onclick="orbOnClick3()" class="button"id="orb3"></button>
+    <button onclick="orbOnClick4()" class="button"id="orb4"></button>
+    <button onclick="orbOnClick5()" class="button"id="orb5"></button>
+
+</html>
+<script>
+let score = 0
+let numOfOrbs = 7 + score
+
+let countdown = 3
+let countdownInterval
+
+const orb = document.getElementById("orb")
+const orb2 = document.getElementById("orb2")
+const orb3 = document.getElementById("orb3")
+const orb4 = document.getElementById("orb4")
+const orb5 = document.getElementById("orb5")
+
+function startCountdown() {
+  const countdownDisplay = document.getElementById('countdown')
+  countdownDisplay.textContent = countdown
+
+  countdownInterval = setInterval(() => {
+    countdown--
+    countdownDisplay.textContent = countdown;
+
+    if (countdown <= 0) {
+      const score = document.getElementById("score")
+      const countdown = document.getElementById("countdown")
+      clearInterval(countdownInterval)
+      
+      orb.style.opacity = 0
+      orb2.style.opacity = 0
+      orb3.style.opacity = 0
+      orb4.style.opacity = 0
+      orb5.style.opacity = 0
+      score.style.opacity = 0
+      countdown.style.opacity = 0
+      const gameOver = document.getElementById("gameOver")
+      const gameOver2 = document.getElementById("gameOver2")
+      const backButton = document.getElementById("backButton")
+      gameOver.style.opacity = 1
+      gameOver2.style.opacity = 1
+      backButton.style.left = 50 + "%"
+      backButton.style.top = 50 + "%"
+
+    }
+  }, 1000)
+}
+
+document.addEventListener('DOMContentLoaded', startCountdown);
+
+
+function orbOnClick(){
+  if(countdown >= 1){
+const orb = document.getElementById("orb")
+
+let l = Math.floor(Math.random()*900)+1;
+let t = Math.floor(Math.random()*700)+1;
+
+orb.style.left = l+"px"
+orb.style.top = t+"px"
+
+score = score + 10
+
+document.getElementById("score").innerHTML = "score: " + score
+app.use(sendScore)
+  }
+}
+
+function orbOnClick2(){
+  if(countdown >= 1){
+const orb = document.getElementById("orb2")
+
+
+let l = Math.floor(Math.random()*900)+1;
+let t = Math.floor(Math.random()*700)+1;
+
+orb.style.left = l+"px"
+orb.style.top = t+"px"
+
+score = score + 10
+
+document.getElementById("score").innerHTML = "score: " + score
+app.use(sendScore)
+  }
+}
+
+function orbOnClick3(){
+  if(countdown >= 1){
+const orb = document.getElementById("orb3")
+
+let l = Math.floor(Math.random()*900)+1;
+let t = Math.floor(Math.random()*700)+1;
+
+orb.style.left = l+"px"
+orb.style.top = t+"px"
+
+score = score + 10
+
+document.getElementById("score").innerHTML = "score: " + score
+app.use(sendScore)
+  }
+}
+function orbOnClick4(){
+  if(countdown >= 1){
+const orb = document.getElementById("orb4")
+
+let l = Math.floor(Math.random()*900)+1;
+let t = Math.floor(Math.random()*700)+1;
+
+orb.style.left = l+"px"
+orb.style.top = t+"px"
+score = score + 10
+
+document.getElementById("score").innerHTML = "score: " + score
+app.use(sendScore)
+  }
+}
+function orbOnClick5(){
+  if(countdown >= 1){
+const orb = document.getElementById("orb5")
+
+let l = Math.floor(Math.random()*900)+1;
+let t = Math.floor(Math.random()*700)+1;
+
+orb.style.left = l+"px"
+orb.style.top = t+"px"
+
+score = score + 10
+
+document.getElementById("score").innerHTML = "score: " + score
+app.use(sendScore)
+  }
+}
+
+</script>
+<style>
+.button {
+  background-color: #ff0000;
+  border: none;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 10px;
+  margin: 2px 1px;
+  border-radius: 80%;
+  position: absolute;
+}
+
+*{
+  font-family: Lexend;
+}
+
+button#orb {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+button#orb2 {
+  position: absolute;
+  top: 30%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+}
+
+button#orb3 {
+  position: absolute;
+  top: 70%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+}
+
+button#orb4 {
+  position: absolute;
+  top: 70%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+button#orb5 {
+  position: absolute;
+  top: 30%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+}
+
+</style>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<link href='https://fonts.googleapis.com/css?family=Lexend' rel='stylesheet'>
+
+<html>
+    <title>orbicon</title>
+    <body>
+        <canvas id="orbiconCanvas" width="200" height="100" style="position: absolute; left: 50.3%; top: 45%; transform: translate(-50%, -50%);"></canvas>
+        <p style="position: absolute; left: 50%; top: 49%; transform: translate(-50%, -50%); font-family: Lexend; font-size: 24px;">orbicon</p>
+        <p style="position: absolute; left: 50%; top: 54%; transform: translate(-50%, -50%); font-family: Lexend; font-size: 10px; opacity: 90%;">v1.0</p>
+        <button style="font-family: Lexend; position: absolute; left: 50%; top: 60%; transform: translate(-50%, -50%);"><a href="game.html">play</a></button>
+        <button style="font-family: Lexend; position: absolute; left: 50%; top: 65%; transform: translate(-50%, -50%);"><a href="howtoplay.html">how to play</a></button>
+    </body>
+</html>
+<style>
+a{
+    text-decoration:none;
+    color: black
+}
+
+</style> 
+<script>
+let c = document.getElementById("orbiconCanvas");
+let ctx = c.getContext("2d");
+ctx.beginPath();
+ctx.arc(95, 50, 40, 0, 2 * Math.PI);
+ctx.stroke();
+ctx.fill();
+</script>
